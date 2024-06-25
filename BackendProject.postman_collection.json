@@ -1,0 +1,1035 @@
+{
+	"info": {
+		"_postman_id": "2fe27963-3d5f-480e-b9d9-469ff17251ed",
+		"name": "BackendProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31234832",
+		"_collection_link": "https://speeding-comet-940856.postman.co/workspace/Team-Workspace~bb76d112-221d-408a-8481-1f28caf867db/collection/31234832-2fe27963-3d5f-480e-b9d9-469ff17251ed?action=share&source=collection_link&creator=31234832"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "amin12",
+									"type": "text"
+								},
+								{
+									"key": "fullName",
+									"value": "Amin mewati",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "amin123@google.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "coverImage",
+									"type": "file",
+									"src": "/C:/Users/riskl/OneDrive/Pictures/poster 2.0.png"
+								},
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/C:/Users/riskl/OneDrive/Pictures/38d454f74e873c8990f5e31e830a19d7.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Server}}/users/register",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/users/logout",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"amin\",\r\n    \"email\": \"jk123@google.com\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server}}/users/login",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "channel-profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/users/c/junaid12",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"users",
+								"c",
+								"junaid12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "watch-history",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/users/watch-history",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"users",
+								"watch-history"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\": \"12333\",\r\n    \"newPassword\": \"lethergo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server}}/users/change-password",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"users",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh-token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/users/refresh-token",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"users",
+								"refresh-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "current-user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/users/current-user",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"users",
+								"current-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-account",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Junaid\",\r\n    \"email\": \"abc@google.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server}}/users/update-account",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"users",
+								"update-account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-cover-image",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "coverImage",
+									"type": "file",
+									"src": "/C:/Users/riskl/OneDrive/Pictures/colllege/IMG_20230404_114037 (2).jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Server}}/users/update-cover-image",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"users",
+								"update-cover-image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-avatar",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/C:/Users/riskl/OneDrive/Pictures/poster 2.0.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Server}}/users/update-avatar",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"users",
+								"update-avatar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "video",
+			"item": [
+				{
+					"name": "upload-video",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Y",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Z",
+									"type": "text"
+								},
+								{
+									"key": "videoFile",
+									"type": "file",
+									"src": "/C:/Users/riskl/Videos/Captures/Brave 2023-10-31 21-26-10.mp4"
+								},
+								{
+									"key": "thumbnail",
+									"type": "file",
+									"src": "/C:/Users/riskl/OneDrive/Pictures/38d454f74e873c8990f5e31e830a19d7.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Server}}/videos/upload-video",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"videos",
+								"upload-video"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-video-by-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/videos/c/65b00c51c7d31e3cf61355ec",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"videos",
+								"c",
+								"65b00c51c7d31e3cf61355ec"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-video",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Title updated",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Description updated",
+									"type": "text"
+								},
+								{
+									"key": "thumbnail",
+									"type": "file",
+									"src": "/C:/Users/riskl/OneDrive/Pictures/Screenshots/Screenshot (45).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Server}}/videos/c/65a7a78674960377d0e5fe83",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"videos",
+								"c",
+								"65a7a78674960377d0e5fe83"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-video",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/videos/c/65a7b06458a2d12d965599d3",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"videos",
+								"c",
+								"65a7b06458a2d12d965599d3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggle-isPublished",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{Server}}/videos/toggle/publish/65aad982e0ed6be65d083e20",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"videos",
+								"toggle",
+								"publish",
+								"65aad982e0ed6be65d083e20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-videos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/videos/get-videos?page=1&limit=3&query=video1&sortBy=title&sortType=asc&userId=65a7b00d58a2d12d965599ca",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"videos",
+								"get-videos"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "3"
+								},
+								{
+									"key": "query",
+									"value": "video1"
+								},
+								{
+									"key": "sortBy",
+									"value": "title"
+								},
+								{
+									"key": "sortType",
+									"value": "asc"
+								},
+								{
+									"key": "userId",
+									"value": "65a7b00d58a2d12d965599ca"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tweet",
+			"item": [
+				{
+					"name": "create-tweet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"Good morning\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server}}/tweets/",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"tweets",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-tweets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/tweets/user/65b12983d3a94832ea2f8815",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"tweets",
+								"user",
+								"65b12983d3a94832ea2f8815"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-tweet",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newContent\": \"My first tweet is updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server}}/tweets/65ae9514f75642c9afa7b7dc",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"tweets",
+								"65ae9514f75642c9afa7b7dc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-tweet",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/tweets/65ae9514f75642c9afa7b7dc",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"tweets",
+								"65ae9514f75642c9afa7b7dc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comment",
+			"item": [
+				{
+					"name": "add-comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"Awesome\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server}}/comments/65b00c51c7d31e3cf61355ec",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"comments",
+								"65b00c51c7d31e3cf61355ec"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all-comment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/comments/65b00c51c7d31e3cf61355ec",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"comments",
+								"65b00c51c7d31e3cf61355ec"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-comment",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newContent\": \"Very nice 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server}}/comments/c/65b00e26540f8d1100c37c4a",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"comments",
+								"c",
+								"65b00e26540f8d1100c37c4a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/comments/c/65b020b0495cbff195c5d839",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"comments",
+								"c",
+								"65b020b0495cbff195c5d839"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "subscription",
+			"item": [
+				{
+					"name": "subscribed-channel-list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/subscriptions/c/65b12983d3a94832ea2f8815",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"subscriptions",
+								"c",
+								"65b12983d3a94832ea2f8815"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggle-subscription",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/subscriptions/c/65a7b00d58a2d12d965599ca",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"subscriptions",
+								"c",
+								"65a7b00d58a2d12d965599ca"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "subscriber-list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/subscriptions/u/65a7b00d58a2d12d965599ca",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"subscriptions",
+								"u",
+								"65a7b00d58a2d12d965599ca"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "like",
+			"item": [
+				{
+					"name": "toggle-like-video",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/likes/toggle/v/65ad253971a1020503d8b36f",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"likes",
+								"toggle",
+								"v",
+								"65ad253971a1020503d8b36f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggle-like-comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/likes/toggle/c/65b00e26540f8d1100c37c4a",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"likes",
+								"toggle",
+								"c",
+								"65b00e26540f8d1100c37c4a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggle-like-tweet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/likes/toggle/t/65b2ab68fede85ab5a029f12",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"likes",
+								"toggle",
+								"t",
+								"65b2ab68fede85ab5a029f12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "liked-videos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/likes/videos",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"likes",
+								"videos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "playlist",
+			"item": [
+				{
+					"name": "create-playlist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Playlist1\",\r\n    \"description\": \"Just for testing\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server}}/playlists",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"playlists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "playlist-Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/playlists/65b39ec7e8fa3140f8e55817",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"playlists",
+								"65b39ec7e8fa3140f8e55817"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-video-playlist",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/playlists/add/65ad253971a1020503d8b36f/65b39ec7e8fa3140f8e55817",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"playlists",
+								"add",
+								"65ad253971a1020503d8b36f",
+								"65b39ec7e8fa3140f8e55817"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-playlists",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/playlists/user/65a7b00d58a2d12d965599ca",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"playlists",
+								"user",
+								"65a7b00d58a2d12d965599ca"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove-video",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/playlists/remove/65ad253971a1020503d8b36f/65b39ec7e8fa3140f8e55817",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"playlists",
+								"remove",
+								"65ad253971a1020503d8b36f",
+								"65b39ec7e8fa3140f8e55817"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-playlist",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/playlists/65b39ec7e8fa3140f8e55817",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"playlists",
+								"65b39ec7e8fa3140f8e55817"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-playlist",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\" : \"Playlist1 description is updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server}}/playlists/65b3fa688c02c6a3e6206c8b",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"playlists",
+								"65b3fa688c02c6a3e6206c8b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "dashboard",
+			"item": [
+				{
+					"name": "channel-videos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/dashboard/videos",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"dashboard",
+								"videos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "channel-stats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Server}}/dashboard/stats",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"dashboard",
+								"stats"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "health-check",
+			"item": [
+				{
+					"name": "health-check",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
